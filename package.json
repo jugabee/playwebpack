@@ -1,0 +1,29 @@
+{
+  "name": "sbtwebpack",
+  "version": "1.0.0",
+  "description": "[<img src=\"https://img.shields.io/travis/playframework/play-scala-starter-example.svg\"/>](https://travis-ci.org/playframework/play-scala-starter-example)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "typings install",
+    "watch": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-loader": "^2.2.2",
+    "typescript": "^2.5.0-dev.20170712",
+    "typings": "^2.1.1",
+    "webpack": "^3.2.0"
+  },
+  "dependencies": {
+    "@types/react": "^15.0.38",
+    "@types/react-dom": "^15.5.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
