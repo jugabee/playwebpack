@@ -1,4 +1,4 @@
-const path = require('path');
+var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -33,6 +33,14 @@ module.exports = {
     new ExtractTextPlugin({ // define where to save the file
       filename: './app/assets/dist/bundle.css',
       allChunks: true,
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
+    new webpack.ProvidePlugin({
+      _: 'underscore',
+      underscore: 'underscore'
     }),
   ],
 }
