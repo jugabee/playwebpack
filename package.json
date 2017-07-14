@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "description": "Play with webpack",
   "main": "app.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ts-node node_modules/tape/bin/tape ./app/assets/javascripts/tests/*.ts | tap-spec",
     "prepublish": "typings install",
     "watch": "webpack --watch"
   },
@@ -19,6 +16,7 @@
     "extract-text-webpack-plugin": "^2.1.2",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
+    "tap-spec": "^4.1.1",
     "ts-loader": "^2.2.2",
     "typescript": "^2.5.0-dev.20170712",
     "typings": "^2.1.1",
@@ -30,6 +28,6 @@
     "bootstrap": "^4.0.0-alpha.6",
     "jquery": "^3.2.1",
     "jquery-ui": "^1.12.1",
-    "jquery-ui-bundle": "^1.12.1"
+    "tape": "^4.7.0"
   }
 }

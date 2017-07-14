@@ -2,7 +2,7 @@ import * as $ from 'jquery';
 // import for jquery ui fix https://stackoverflow.com/a/42482037
 import 'jquery-ui';
 import 'jquery-ui/ui/widgets/dialog';
-import { TestClass } from './test';
+import { TestClass } from './test-class';
 
 $( () => {
   let $app: JQuery = $("#app");
