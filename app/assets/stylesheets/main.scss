@@ -1,0 +1,228 @@
+@import "~bootstrap/scss/bootstrap";
+@import "jquery-ui/jquery-ui";
+@import "jquery-ui/jquery-ui.structure";
+@import "variables";
+@import "partials/jquery-ui-custom";
+
+html {
+    font-size: 15px;
+    height: 100%;
+}
+body {
+    color: $table-body-color;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+.jumbotron {
+  background-color: #7b705b!important;
+  background-image:
+      url(/assets/images/bg-map-panel.png),
+      url(/assets/images/bg-brick.png),
+      linear-gradient(to bottom, #8e8065 10%, #786d55 100%)!important;
+  background-repeat: repeat!important;
+  box-shadow:
+      inset 0px 0px 50px 3px rgba(88,70,40,0.87),
+      0 5px 15px rgba(0,0,0,0.5);
+}
+canvas {
+    outline: 0;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: $brown-white;
+    text-shadow: $text-shadow;
+}
+h6.header {
+    margin-bottom: 0;
+    padding: 1rem 0rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: none;
+}
+label {
+    color: $body-color;
+}
+blockquote {
+    margin: 0;
+}
+dl {
+    margin-bottom: 0rem;
+}
+dt {
+    font-weight: normal;
+}
+dd.error {
+    color: $brand-red;
+}
+.text-danger {
+    color: $brand-red!important;
+}
+code {
+    font-size: 100%;
+    padding: 0;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $brown-light;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: $brown-light;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: $brown-light;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: $brown-light;
+}
+.form-control:disabled, .form-control[readonly] {
+    color: $brown-light;
+}
+.form-control-file {
+    color: $body-color;
+    background-color: $brown-dark;
+    border: 2px solid $brown-black;
+    box-shadow: $input-box-shadow;
+    width: 100%;
+}
+.file-container {
+    width: 100%;
+}
+.btn {
+    cursor: pointer;
+}
+.btn-primary:focus, .btn-secondary:focus, .btn-danger:focus, .btn-success:focus {
+    box-shadow: $btn-box-shadow, 0 0 0 2px $brown-orange;
+}
+.btn-primary:hover, .btn-success:hover, .btn-danger:hover, .btn-secondary:hover {
+    color: $brown-white;
+}
+.nav-tabs .nav-link.active {
+    border: transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    box-shadow:
+        inset 0px 3px 2px 0px #8f7757,
+        inset 0px 6px 10px 0px rgba(96,72,31,0.24),
+        inset 0px 0px 10px #5f4218,
+        0px -2px 15px 0px rgba(110, 87, 52, 0.91);
+}
+.nav-tabs .nav-item {
+    margin-bottom: -4px;
+}
+.nav-tabs {
+    border-bottom: 2px solid #33312f;
+}
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+}
+.modal.show[style] {
+    padding-left: 0px !important;
+}
+.modal p {
+    color: $brown-lightest;
+}
+.modal-content {
+    padding: .75rem;
+    background-color: #7b705b;
+    background-image: $modal-background-image;
+    background-repeat: repeat;
+    box-shadow: $modal-box-shadow;
+    border: none;
+    border-radius: .25rem;
+}
+.badge {
+    border-radius: .25rem;
+}
+.form-group {
+    padding: 1rem 0rem;
+    margin-bottom: 0;
+    &.row {
+    }
+}
+// align labels on custom bootstrap checkboxes
+.custom-checkbox .custom-control-description {
+    vertical-align: middle;
+}
+// remove outlines on custom bootstrap checkboxes
+.custom-checkbox .custom-control-indicator {
+    box-shadow: none !important;
+}
+.modal-title {
+    font-family: "IM Fell English SC", serif;
+    font-size: 2rem;
+}
+#wrapper {
+    height: 100%;
+}
+#sidebar-wrapper {
+    right: 0px;
+    width: 340px;
+    position: absolute;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1000;
+}
+#canvas-loading {
+    transition: visibility 0s, opacity 0s linear;
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+    background: black;
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    color: $chat-gray-lighter;
+    &.loaded {
+        transition: visibility .5s, opacity .5s linear;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+#canvas-container {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    #focus-container {
+        &.active {
+            opacity: 1;
+        }
+        opacity: 0;
+        transition: $transition-fade;
+        pointer-events: none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        box-shadow: inset 0px 0px 0px 2px lighten($brand-primary, 25%);
+    }
+}
+#canvas-icons-container {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+    z-index: 10;
+    padding: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+// gapi Picker styles
+.picker-dialog-bg {
+    background-color: #000!important;
+}
+.picker-dialog {
+    top: 30px!important;
+}
+// adjust color inside formatted tooltips
+.tooltip span.critical-hit {
+    color: lighten(saturate($chat-critical-hit, 35%), 15%);
+}
+.tooltip span.critical-miss {
+    color: lighten(saturate($chat-critical-miss, 35%), 10%);
+}
+.tooltip span.character-name {
+    font-weight: bold;
+}

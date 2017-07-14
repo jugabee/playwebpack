@@ -16,10 +16,5 @@ libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.0.0
 libraryDependencies += "com.h2database" % "h2" % "1.4.194"
 
 PlayKeys.playRunHooks += Webpack(baseDirectory.value)
-watchSources ~= { (ws: Seq[File]) =>
-  ws filterNot { path =>
-    path.getName.endsWith(".js") || path.getName == ("build")
-  }
-}
 
 pipelineStages := Seq(digest, gzip)

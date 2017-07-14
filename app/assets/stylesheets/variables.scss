@@ -1,0 +1,179 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+$enable-shadows:            true;
+$enable-rounded:            false;
+$border-width:              2px;
+$gray-dark:                 #2b2826;
+$brown-black:               #2b2826; // main header & footer bg & button borders
+$brown-darker:              #413f3a; // card cap bg
+$brown-dark:                #4b473f; // button bg
+$brown:                     #625d50; // body bg
+$brown-light:               #a2947e; // text muted
+$brown-lighter:             #f2cd99; // links
+$brown-lightest:            #ddcab3; // body text color for brown bgs
+$brown-white:               #f0ddc0; // headers & active tabs
+$brown-orange:              #af8b55; // focus color
+
+$brand-green:               #5dd262; // bright green color used to denote player related stuff.
+$brand-red:                 #f48784; // red color for gm badges, tags, inline text errors, etc
+
+$body-bg:                   $brown;
+$body-color:                $brown-lightest;
+$link-color:                $brown-lighter;
+$link-hover-decoration:     none;
+$link-hover-color:          $brown-white;
+$font-family-base:          'Roboto', sans-serif;
+
+$text-muted:                $brown-light;
+$text-shadow:               0 1px 1px rgba(0,0,0,0.5);
+$text-shadow-green:         rgb(17, 133, 23) 0px 0px 10px;
+
+$header-box-shadow:         0 1px 3px rgba(0,0,0,.5);
+
+$modal-background-image:    url(/assets/images/bg-map-panel.png),
+                            url(/assets/images/bg-brick.png),
+                            linear-gradient(to bottom, #8e8065 10%, #786d55 100%);
+$modal-box-shadow:          inset 0px 2px 4px rgba(255,204,148,0.17),
+                            inset 0px -5px 50px 3px rgba(88, 70, 40, 0.87),
+                            0 5px 15px rgba(0,0,0,0.5);
+$help-modal-box-shadow:     inset 0px 2px 4px rgba(255,204,148,0.17),
+                            inset 0px -5px 50px 3px rgba(33, 24, 8, 0.87),
+                            0 5px 15px rgba(0,0,0,0.5);
+$modal-background-image-no-grad:   url(/assets/images/bg-map-panel.png);
+$modal-content-bg:          $brown;
+$modal-content-border-width:0px;
+$modal-header-border-color:         transparent;
+$modal-footer-border-color:         transparent;
+$close-text-shadow:         none;
+
+$navbar-inverse-color:      $link-color;
+$navbar-inverse-hover-color:$link-hover-color;
+
+$btn-box-shadow:            inset 0px 2px 2px rgba(255,216,158,0.15),
+                            inset 0px -1px 5px #493d27, 0 2px 2px rgba(0,0,0,0.175);
+$btn-active-box-shadow:     none;
+
+$btn-primary-color:         $brown-lighter;
+$btn-primary-bg:            $brown-dark;
+$btn-primary-border:        $brown-black;
+
+$btn-danger-bg:             #72503c;
+$btn-danger-border:         $brown-black;
+$btn-danger-color:          $brand-red;
+
+$btn-success-color:         $brand-green;
+$btn-success-bg:            #55693f;
+$btn-success-border:        $brown-black;
+
+$btn-secondary-color:       $brown-lighter;
+$btn-secondary-bg:          $brown-dark;
+$btn-secondary-border:      $brown-black;
+
+$card-cap-bg:               $brown-darker;
+$card-bg:                   $brown-dark;
+$card-border-color:         $brown-black;
+$card-border-width:         2px;
+$card-box-shadow:           0 2px 2px rgba(0,0,0,0.175);
+
+$input-bg:                  lighten($brown-dark, 4%);
+$input-bg-disabled:         lighten($brown-dark, 4%);
+$input-border-focus:        $brown-orange;
+$input-color-placeholder:   $brown-light;
+$input-box-shadow:          inset 0 1px 10px rgba(0,0,0,0.15), inset 0 -1px 15px rgba(156, 95, 12, 0.16);
+
+$input-color:               $body-color;
+$input-border-color:        $brown-black;
+$input-group-addon-bg:      $brown-dark;
+$input-box-shadow-focus:    none;
+
+$custom-select-bg:                     lighten($brown-dark, 4%);
+$custom-select-color:                  $body-color;
+$custom-select-indicator-color:        $body-color;
+$custom-select-focus-border-color:     $brown-black;
+$custom-select-focus-box-shadow:       none;
+
+$custom-control-checked-indicator-color:      $body-color;
+$custom-control-checked-indicator-bg:         $brown-black;
+$custom-control-active-indicator-color:       $body-bg;
+$custom-control-active-indicator-bg:          lighten($brown-black, 35%);
+
+$badge-default-bg:                  $brown-black;
+$badge-color:                       $body-color;
+$badge-link-hover-color:            $body-color;
+
+$dropdown-divider-bg:               $brown;
+$dropdown-bg:                       $brown-dark;
+$dropdown-border-color:             $brown-black;
+$dropdown-divider-bg:               $brown;
+$dropdown-link-color:               $link-color!important;
+$dropdown-link-hover-color:         $brown-white!important;
+$dropdown-link-hover-bg:            $brown-darker;
+$dropdown-link-disabled-color:      $brown-light;
+$dropdown-header-color:             $brown-light;
+
+$nav-tabs-active-link-hover-bg:               transparent;
+$nav-tabs-active-link-hover-color:            $brown-white;
+$nav-tabs-active-link-hover-border-color:     $brown-dark;
+$nav-tabs-justified-link-border-color:        $brown-dark;
+$nav-tabs-link-hover-border-color:            transparent;
+
+$table-inverse-bg:          $brown-black;
+$table-inverse-color:       $link-color;
+
+$alert-border-width:        2px;
+$state-danger-text:         $brand-red;
+
+$alert-danger-bg:             #72503c;
+$alert-danger-text:           $brand-red;
+$alert-danger-border:         $brown-black;
+$alert-success-bg:            #55693f;
+$alert-success-text:          saturate(lighten($brand-green, 10%), 10%);
+$alert-success-border:        $brown-black;
+$alert-padding-x:             1rem;
+$alert-padding-y:             1rem;
+
+$popover-bg:                          $brown-dark;
+$popover-border-width:                $border-width;
+$popover-border-color:                $brown-black;
+$popover-inner-padding:               0px;
+$popover-arrow-color:                 $brown-black;
+$popover-box-shadow:                  inset 0px 2px 2px rgba(255,216,158,0.15),
+                                      inset 0px -1px 5px #493d27,
+                                      0 5px 15px rgba(0,0,0,0.5);
+
+// the chat sidebar has different colors than the rest of the site, for visibility.
+$chat-font-size-root:            13px;
+$chat-font-size-base:            1em;
+$chat-font-size-lg:              1.15em;
+$chat-font-size-sm:              .85em;
+
+// chat related ui colors
+$chat-gray-dark:                 #333333;
+$chat-gray:                      #55595c;
+$chat-gray-light:                #818a91;
+$chat-gray-lighter:              #eee;
+$chat-gray-lightest:             #f7f7f9;
+$chat-footer-color:              #e2e2e2;
+
+$table-body-color:               $chat-gray-dark;
+$chat-link-color:                #0275d8;
+
+$chat-footer-shadow:             inset 0px 1px 3px 0px rgba(0,0,0,0.1);
+$table-box-shadow:               0 2px 2px rgba(0,0,0,0.175);
+$table-border:                   1px solid rgba(0,0,0,.2);
+
+// chat commands
+$chat-roll-command-color:        oldlace;
+$chat-me-command-color:          #dff0d8;
+
+// other chat colors
+$chat-whisper-color:             #fffce5;
+$chat-gm-color:                  #ffe4e4;
+$chat-has-tags:                  #3FAB41;
+$chat-critical-hit:              #3FAB41;
+$chat-critical-miss:             #EF413D;
+$chat-critical-mix:              #0074d9;
+$chat-inline-roll-bg:            #FFE97E;
