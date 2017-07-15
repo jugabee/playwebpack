@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^8.0.13",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
     "node-sass": "^4.5.3",
@@ -29,6 +30,7 @@
     "@types/jquery": "^3.2.8",
     "@types/jquery-mousewheel": "^3.1.7",
     "@types/jqueryui": "^1.11.34",
+    "@types/spectrum": "^1.5.29",
     "@types/underscore": "^1.8.1",
     "bootstrap": "^4.0.0-alpha.6",
     "clipper-lib": "^6.2.1",

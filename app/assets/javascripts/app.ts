@@ -1,3 +1,5 @@
+import * as $ from 'jquery';
+import * as _ from 'underscore';
 // import for jquery ui fix https://stackoverflow.com/a/42482037
 import 'jquery-ui';
 import 'jquery-ui/ui/widgets/dialog';
@@ -7,14 +9,15 @@ import * as imagesLoaded from 'imagesloaded';
 import * as Util from './util';
 import { TestClass } from './test-class';
 
+var hx = require('./visibility');
+
 $(() => {
 
   $("#colorpicker").spectrum({
       color: "#f00"
   });
 
-  // can't get webpack to load visibility yet, so I just put it in a script tag
-  console.log(Visibility);
+  console.log(new hx.Visibility());
 
   // underscore
   console.log(_.debounce);

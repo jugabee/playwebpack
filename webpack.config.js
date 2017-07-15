@@ -34,13 +34,5 @@ module.exports = {
       filename: './app/assets/dist/bundle.css',
       allChunks: true,
     }),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
-    }),
-    new webpack.ProvidePlugin({
-      _: 'underscore',
-      underscore: 'underscore'
-    }),
   ],
 }
