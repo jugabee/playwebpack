@@ -1,22 +1,37 @@
 import * as $ from 'jquery';
 import * as _ from 'underscore';
+import * as PIXI from 'pixi.js';
 // import for jquery ui fix https://stackoverflow.com/a/42482037
 import 'jquery-ui';
 import 'jquery-ui/ui/widgets/dialog';
 import 'jquery-mousewheel';
 import 'spectrum-colorpicker';
+import * as earcut from 'earcut';
+import * as ClipperLib from 'clipper-lib';
 import * as imagesLoaded from 'imagesloaded';
 import * as Util from './util';
 import { TestClass } from './test-class';
 
+// no types declared, using standard require
 var hx = require('./visibility');
 
 $(() => {
 
+  console.log(earcut);
+
+  console.log(ClipperLib);
+
+  // pixi js
+  let renderer: PIXI.SystemRenderer;
+  renderer = new PIXI.WebGLRenderer(800, 600, { antialias: false, forceFXAA: false, resolution: 1});
+  console.log(renderer);
+
+  // spectrum colorpicker
   $("#colorpicker").spectrum({
       color: "#f00"
   });
 
+  // visibility.js
   console.log(new hx.Visibility());
 
   // underscore
