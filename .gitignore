@@ -8,3 +8,4 @@ target
 /RUNNING_PID
 app/assets/dist
 node_modules
+npm-debug.log
