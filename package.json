@@ -2,7 +2,8 @@
   "name": "sbtwebpack",
   "version": "1.0.0",
   "engines": {
-    "node": "6.11.1"
+    "node": "6.11.1",
+    "npm": "5.3.0"
   },
   "description": "Play with webpack",
   "main": "app.js",
