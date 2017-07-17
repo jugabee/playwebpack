@@ -8,8 +8,6 @@
   "main": "app.js",
   "scripts": {
     "test": "ts-node node_modules/tape/bin/tape ./app/assets/javascripts/tests/*.ts | tap-spec",
-    "start": "sbt run",
-    "clean": "sbt clean run",
     "prepublish": "typings install"
   },
   "keywords": [],
