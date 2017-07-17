@@ -1,4 +1,4 @@
-(function(hx) {
+var hx = (function() {
   "use strict";
 
   function $extend(from, fields) {
@@ -15,12 +15,12 @@
   Std.string = function(s) {
     return js_Boot.__string_rec(s, "");
   };
-  var Block = hx.Block = function() {};
+  var Block = function() {};
   Block.__name__ = true;
   Block.prototype = {
     __class__: Block
   };
-  var Point = hx.Point = function(x_, y_) {
+  var Point = function(x_, y_) {
     this.y = 0.0;
     this.x = 0.0;
     this.x = x_;
@@ -30,7 +30,7 @@
   Point.prototype = {
     __class__: Point
   };
-  var EndPoint = hx.EndPoint = function(x_, y_) {
+  var EndPoint = function(x_, y_) {
     this.visualize = false;
     this.angle = 0.0;
     this.segment = null;
@@ -42,12 +42,12 @@
   EndPoint.prototype = $extend(Point.prototype, {
     __class__: EndPoint
   });
-  var Segment = hx.Segment = function() {};
+  var Segment = function() {};
   Segment.__name__ = true;
   Segment.prototype = {
     __class__: Segment
   };
-  var Visibility = hx.Visibility = function() {
+  var Visibility = function() {
     this.segments = new de_polygonal_ds_DLL();
     this.endpoints = new de_polygonal_ds_DLL();
     this.open = new de_polygonal_ds_DLL();
@@ -811,4 +811,8 @@
   };
   var Enum = {};
   de_polygonal_ds_HashKey._counter = 0;
-})(exports);
+
+  return {
+    Visibility: Visibility
+  };
+})();

@@ -12,8 +12,9 @@ import * as imagesLoaded from 'imagesloaded';
 import * as Util from './util';
 import { TestClass } from './test-class';
 
-// no types declared, using standard require
-var hx = require('./visibility');
+// no types declared; using standard require with exports loader
+// sets module.exports = hx at bottom of visibility.js
+var hx = require("exports-loader?hx!./visibility.js");
 
 $(() => {
 
