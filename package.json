@@ -9,7 +9,7 @@
   "main": "app.js",
   "scripts": {
     "test": "ts-node node_modules/tape/bin/tape ./app/assets/javascripts/tests/*.ts | tap-spec",
-    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress",
+    "heroku-postbuild": "webpack",
     "prepublish": "typings install"
   },
   "keywords": [],
