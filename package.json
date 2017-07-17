@@ -10,7 +10,7 @@
   "scripts": {
     "test": "ts-node node_modules/tape/bin/tape ./app/assets/javascripts/tests/*.ts | tap-spec",
     "start": "sbt run",
-    "heroku-postbuild": "webpack",
+    "heroku-postbuild": "webpack -p",
     "prepublish": "typings install"
   },
   "keywords": [],
@@ -45,6 +45,7 @@
     "ts-loader": "2.2.2",
     "typescript": "2.5.0-dev.20170712",
     "typings": "2.1.1",
+    "uglifyjs-webpack-plugin": "0.4.6",
     "underscore": "1.8.3",
     "webpack": "3.2.0"
   }
