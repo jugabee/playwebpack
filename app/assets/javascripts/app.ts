@@ -17,6 +17,8 @@ var hx = require('./visibility');
 
 $(() => {
 
+  console.log("test");
+
   console.log(earcut);
 
   console.log(ClipperLib);
